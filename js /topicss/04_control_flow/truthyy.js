@@ -5,8 +5,8 @@ if (userEmail) {     // here no comparison is done no cond. is checked but here 
 } else {
     console.log("Don't have email")
 }     
-// if there is empty string "" then else part will execute(consider false) 
- //      if [] -> empty array then if part execute (considered true )
+/* if there is empty string "" then else part will execute(consider false) 
+   if [] -> empty array then if part execute (considered true )*/
 
  // falsy valuee
  // false , 0, -0 , BigInt 0n, "" , NaN , null , undefined 

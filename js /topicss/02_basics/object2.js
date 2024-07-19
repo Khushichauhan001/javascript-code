@@ -78,14 +78,15 @@ const obj2 = {3: "a", 4: "b"}
 
       // ************** JSON ************
 
-      {                      // json is also a type of object  
-        name: "khushi",        // syntax:- {    }
-        class: "btech",       // here name itself is also a string nd its value also is a string
-        rollno: "49"
-      }
+      // {                      // json is also a type of object  
+      //   name: "khushi",        // syntax:- {    }
+      //   class: "btech",       // here name itself is also a string nd its value also is a string
+      //   rollno: "49",
+      // }                   // it is not  a type of object bcz in object we need to give a proper name to obect 
+                               // but it donot need to be wrry about error its a correct syntax
 
-      [         // it is use to acces data from api 
-        {},
-        {},
-        {}, 
-      ]
+      // [         // it is use to acces data from api 
+      //   {},
+      //   {},
+      //   {}, 
+      // ]
