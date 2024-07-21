@@ -38,3 +38,4 @@ const coding = [                // [{},{},{}]  :- this form (vvvvvvv... muchhh i
 coding.forEach( (item)=> {      // ye har ek object ko same iteration treat krega ... items or fir 
     console.log(item.name)      // hum u har item m jo filename y kch chahiye use access krlenge sbme s 
 })
+
