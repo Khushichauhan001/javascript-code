@@ -37,10 +37,13 @@ const user= {
         return num1 + num2
     }
      // another way (implict return)
-    // const addTwo = (num1 , num2) => (num1 + num2)   //(dont need to write return keyword while using parenthesis)
+    
+    const addThree = (num1 , num2) => (num1 + num2)   //(dont need to write return keyword while using parenthesis)
 
    // when you want to return object then you cannot get output by only write it in {} , ,also bnd kro inhe ()isme 
-    // const addTwo = (num1 , num2) => ({username: "khushi"})
+    const addme = (num1 , num2) => ({username: "khushi"})
     
     console.log(addTwo(3,4))
+    console.log(addThree(5,4))
+    console.log(addme(2,6));
 

@@ -21,7 +21,7 @@ myArray.forEach( (item , index , arr)=> {
 })
 
 const coding = [                // [{},{},{}]  :- this form (vvvvvvv... muchhh imp)(array k andr object ke andr s particular chiz ka data chahiye)
-    {
+    {                            // can also be use filters
         name: "khushi",
         filename: "ksss"
     },
