@@ -1,0 +1,32 @@
+<!-- how to create a new element in DOM -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushiii</title>
+</head>
+<body style="background-color: black; color:white">
+    <script>
+        const div = document.createElement('div')
+        console.log(div);
+        div.className = "main"
+        div.id = Math.random()
+        // to add other attributes
+        div.setAttribute("title", "generated title") //prefer it bcz it donot overlap
+        // to add styling 
+        div.style.backgroundColor = "green"
+
+    // TWO ways of adding text 
+        // div.innerText = "khushi chauhan"
+        const addText = document.createTextNode("Khushi chauhan")
+        div.appendChild(addText)
+        // can be done by any one method but neeche bala is more optimised
+
+        // now attached this div with body to show output ... abb tk ye sb bs memory m tha kahi apply nai hua tha 
+        document.body.appendChild(div)
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- about childnodes and parent element --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+</head>
+<body style="background-color: black; color:white">
+    <div class="parent">
+    <div class="class">Monday</div>
+    <div class="class">Tuesday</div>
+    <div class="class">Wednesday</div>
+    <div class="class">Sunday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1].innerHTML);
+
+    for (let i = 0; i < prent.children.length; i++) {
+        console.log(parent.children[i].innerHTML)
+        
+    }
+    parent.children[1].style.color="orange"
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+
+// to go from children to parent element 
+const dayOne = document.querySelector('.day')
+console.log(dayOne);
+console.log(dayOne.parentElement);
+
+console.log("NODES: ", parent.childNodes);  // it is 9 as in line 11 we give mect line it is also consider as the nod
+                                           // see   #33 
+
+</script>
+</html>
