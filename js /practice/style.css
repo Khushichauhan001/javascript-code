@@ -1,0 +1,16 @@
+html, body {
+    margin: 0;
+    width: 100%;
+}
+
+.first {
+    margin-top: 5%;
+}
+
+.noBull {
+    list-style: none;
+}
+
+hr {
+    width: 75%;
+}
