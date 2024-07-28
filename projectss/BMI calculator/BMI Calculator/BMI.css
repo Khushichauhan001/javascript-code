@@ -1,0 +1,66 @@
+body{
+ text-align: center;
+ height: 100vh;
+ background-image: url('bmi3.png');
+ background-size: cover;
+ background-repeat: none;
+}
+.container{
+ width: 500px;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ background-color: rgba(0, 0, 0, 0.5);
+ transform: translate(-50%, -50%);
+ box-shadow: 2px 2px 20px #919191;
+}
+#height{
+    color: black;
+    text-align: center;
+    margin: 10px;
+    padding: 7px;
+    border-block-color: black;
+    border-radius: 30px;
+
+}
+#weight{
+    color: black;
+    text-align: center;
+    margin: 10px;
+    padding: 7px;
+    border-block-color: black;
+    border-radius: 30px;
+}
+label{
+    color: aliceblue;
+}
+button {
+     width: 150px;
+     height: 35px;
+     margin: 20px;
+     background-color: rosybrown;
+     color: black;
+     border: 2px solid black;
+}
+
+ #result{
+    color:whitesmoke;
+    border: solid white 2px;
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    margin-left: 150px;
+    margin-top: 15px;
+ }
+ #result-match{
+    color: white;
+    size: 40px;
+}
+
+h4{
+    font-size: 25px;
+}
+button:hover{
+    box-shadow: 1px 1px 1px white;
+    border-radius: 17px;
+}
