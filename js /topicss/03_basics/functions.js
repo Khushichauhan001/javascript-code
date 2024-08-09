@@ -14,9 +14,9 @@ myName()
 // addTwoNumbers(3,4)                 // neeche fnct call krte time jo vlue pass krte h unhe bolte h arguments
 
 function addTwoNumbers(num1 , num2){
-    let result = num1 + num2    (1 method)
+    let result = num1 + num2   // (1 method)
     return result 
-    return num1 +num2            (2 method)
+    return num1 +num2           // (2 method)
 }
 
 const result = addTwoNumbers(4,5)
