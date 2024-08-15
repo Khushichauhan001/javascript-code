@@ -1,0 +1,32 @@
+
+ <!-- bind is used to attached function forcefully -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            // special requirement (ki jse hi ye page load ho toh ek object create hojye react ka)
+            // or hme refernece mil jaye button ka or dusra click krne p kuch click hojaye(ex:- submit hojye ya kuch print hojaye )
+           
+            document.querySelector('button').addEventListener('click', this.handleClick.bind(this))  // now we get the all access of react library
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+            
+        }
+    }
+    const app = new React()
+    </script>
+</html>

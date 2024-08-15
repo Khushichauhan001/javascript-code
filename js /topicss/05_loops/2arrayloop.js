@@ -1,7 +1,7 @@
 // for of       :- specially for array and maps
 
 // ["", "", ""]
-// [{}, {}, {}]
+// [{}, {}, {}]    // not everytime we can apply for of on objects ... so we have to declare a syntax i.e. is Object.entries(object name )
 
 // basic syntax
 
@@ -35,13 +35,15 @@ for (const [key , value] of map) {
 
 
 // use of for of loop on object (not applicable) (gives error)
-// const myObject ={                // this method is not aplicable on objects .. but applicable on map
-//     'game1': 'NFS',
-//     'game2': 'PUBG'
-// }
-// for (const [key, value] of myObject) {
+const myObject ={                // this method is not aplicable on objects .. but applicable on map
+    'game1': 'NFS',
+    'game2': 'PUBG'
+}
+// for (const [key , value] of myObjectobject) {       // give an error bcz we cannot access it directly use lower method
+
 //     console.log(myObject)
 
-
-
+for (const [key, value] of Object.entries(myObject)) {
+    console.log(myObject)
+}
 
