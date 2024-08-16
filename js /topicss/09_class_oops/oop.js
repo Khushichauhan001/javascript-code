@@ -15,7 +15,9 @@ console.log(user.getUserDetails());
 // console.log(this)   // in global scope , it contains the empty object bcz it works as a window global object and it has many many more things in it 
 
 
-// constructor function 
+//  *************** constructor function **************       
+
+ 
 // const promiseOne = new Promise()  // new keyword is an constructor fnc which allows u ki aap ek hi object se multiple instances bna sko
 // const date = new Date()
 

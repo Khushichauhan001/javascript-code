@@ -1,6 +1,6 @@
 // real life exmple : i want ki jese hi koi user bne bese hi use ek unique id mil jaye
 // not full understand 
-
+z
 class User{
     constructor(username){
         this.username = username
@@ -17,7 +17,7 @@ class User{
 
 const khushi = new User("Khushi")
 // console.log(`id is: ${khushi.createId()}`);  // jse isme ise acces ni h createId ka 
-khushi.logMe()
+khushi.logMe()  
 
 
 
