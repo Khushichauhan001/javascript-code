@@ -1,0 +1,86 @@
+<!-- function ke andr bale function p bhr bale k variables ka access rhta h  -->
+<!--  children can access parent but parents not and yess also inner two functions cannot acess each other variables -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+    
+</body>
+<script> 
+    // function init() {                   // see documentation ... very easy lnguage
+
+    //     let name = "Mozilla";          // name is a local variable created by init
+    //      function displayName() {      // displayName() is the inner function, that forms the closure
+    //      console.log(name);            // use variable declared in the parent function
+    //     }
+    //     displayName();
+    //   }
+    //   init();
+
+
+
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret);
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);
+    //         console.log(secret);
+    //     }
+    //     inner()
+    //     innerTwo()
+
+    // }
+    // outer()
+    // console.log("TOO OUTER", username);
+
+     
+
+    // closure   :- jb aap ek pura ka pura function is return kr deto ho to sirf fun return ni hota uska pura lexical scope return hota h 
+    
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;     // yha hmne function ka reference hi pass krdia as a return and after passing its scope has been ended   
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+    </script>
+
+    <script>
+    //    document.getElementById("orange").onclick= function(){
+    //       document.body.style.backgroundColor = `orange`
+    //    }
+    //    document.getElementById("GREEN").onclick= function(){
+    //       document.body.style.backgroundColor = `green`
+    //  }
+
+
+    // more efficient way
+
+    function clickHandler(color){
+        // document.body.style.backGroundColor = `${color}`
+
+        return function(){
+            document.body.style.backGroundColor = `${color}`
+        }
+    }
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+    </script>
+
+</html> 
