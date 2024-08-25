@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: rgba(66, 66, 66);
+    display: flex;
+}
+
+.gameContainer{
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+}
+
+.card{
+    height: 23%;
+    width: 23%;
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.card:active{
+    transform: scale(0.95);
+    transition: transform 0.2s ease-in-out;
+    
+}
+
+
