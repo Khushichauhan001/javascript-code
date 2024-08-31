@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: none;
+    
+}
+.content {
+    margin: 40px;
+    width: 70%;
+    padding: 20px;
+    background-color: lightpink;
+}
+
+main {
+    max-width: 70%;
+    margin: 10px auto;
+    display:flex; 
+    flex-direction: column;
+}
+img{
+    max-width: 100%;
+}
+#image-frame {
+    font-size: x-large;
+    text-align: center;
+    margin: 50px;        /*//////////////////////*/
+}
+#options {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
