@@ -35,4 +35,93 @@ function shuffleArray(array) {
     return shuffleArray(choices);
  }  
 
+  function getBreedFromURL(url){
+      //  let urlParts = url.split("/");   // parts which comes after splitting 
+      //  let splitter = urlParts[4];
+        let unsplitBreed = url.split("/")[4];      // unsplit mtlb poodle-standard (split toh h lkn agr 2 aajaye toh ni h)
+        // let splitArray = unsplitBreed.split("-");
+        // let reverseArray =  splitArray.reverse();
+        // let joinReverseArray = reverseArray.join(" ").trim();
+        // return joinReverseArray;
+        let [breed,subbreed] = unsplitBreed.split("-");
+        return[subbreed, breed].join(" ").trim();
+      }
+
+
+  async function fetchMessage(url) {
+    try{
+      const response = await fetch(url);
+      const body = await response.json();
+      const {message} = body ;       // it is used to extract the message which is in the array form from body 
+      return message;
+    } catch {
+       console.log("Error fetching data:" , error);
+       return null ;
+    }
+  }
+   
+  
+ /// now i am going to implement all these functions into our page ... adding all stufs like pictures and buttons
+
+
+ function renderButtons(choicesArray, correctAnswer) {
+
+
+     function buttonHandler(e) {
+       if (e.target.value === correctAnswer) {
+         e.target.classList.add("correct");
+        } else {
+                e.target.classList.add("incorrect");
+                document.querySelector(`button[value="${correctAnswer}"]`).classList.add("correct");
+             }
+      }
  
+      const options = document.getElementById("options"); // Container for the multiple-choice buttons
+
+
+       for(let choice of choicesArray){
+        const button = document.createElement("button");
+        button.textContent = choice ;     // we can also use setAttribute property here
+        button.value = choice;
+        button.name = choice;
+        button.addEventListener("click" , buttonHandler);// we donot call the btnhandler function but onlu passes as a callback function
+         options.appendChild(button);       // to pass the element bcz we donot have any function like element.push
+         
+        }
+    }
+
+
+         function renderQuiz(imgUrl, correctAnswer , choices){
+             const image = document.createElement("img");
+             image.setAttribute("src", imgUrl);   // This code does not display the image yet, but it prepares the image to be loaded.
+             const frame = document.getElementById("image-frame");  //The image will be inserted into this frame once it's ready.
+
+
+             image.addEventListener("load", ()=> {   // wait until image has been loaded
+                  frame.replaceChildren(image);     // all  previous content remove and only image will display
+                  renderButtons(choices,correctAnswer);  // option displY
+
+             })
+         }
+
+        async function loadQuizData(){
+          document.getElementById("image-frame").textContent = "Fetching Doggo...";
+
+          const doggoImgUrl = await fetchMessage(random_image_point) ; // it give me the url of totally  random breed   ... it don't give me the image but tha url of that image 
+           const correctBreed = getBreedFromURL(doggoImgUrl);
+           const breedChoices = getMultipleChoices(3 , correctBreed, BREEDS);
+
+
+         return[doggoImgUrl, correctBreed , breedChoices];
+
+          
+        }
+         async function startQuiz(){    
+          const [imgUrl , correctAnswer , choices] = await loadQuizData();
+          renderQuiz(imgUrl, correctAnswer , choices);
+         
+         }
+         startQuiz();
+        
+
+    

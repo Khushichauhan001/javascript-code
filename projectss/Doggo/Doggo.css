@@ -6,10 +6,9 @@ body{
     
 }
 .content {
-    margin: 40px;
     width: 70%;
-    padding: 20px;
-    background-color: lightpink;
+    margin: 1em auto;
+    background-color: lightblue;
 }
 
 main {
@@ -24,10 +23,28 @@ img{
 #image-frame {
     font-size: x-large;
     text-align: center;
-    margin: 50px;        /*//////////////////////*/
+    margin: 1em auto;        /*//////////////////////*/
 }
 #options {
     max-width: 100%;
     display: flex;
     flex-direction: column;
+}
+#explanation, #score {
+    padding: 1rem;
+    text-align: center;
+}
+button {
+    padding: 0.5rem;
+    font-size: medium;
+    border-radius: 5px;
+}
+.correct {
+    background-color: lightgreen;
+}
+.incorrect {
+    background-color: lightpink;
+}
+.hidden {
+    display: none;
 }
