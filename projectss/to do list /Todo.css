@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background-image: url('wallpaper2.png');
+  background-size: cover;
+  background-repeat: none;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+
+}
+.stats-container {
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+     box-shadow: 2px 2px 20px black;
+     position: absolute;
+     top: 20%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+      width: 400px; 
+     display: flex; 
+       
+}
+
+#progressBar{
+    width: 100%;
+    height: 10px;
+    background-color:  #677e97  ;
+    border-radius: 5px;
+    margin-top: 15px;
+
+}
+
+#progress{
+    width: 80%;
+    height: 10px;
+    background-color: #394654;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+#numbers {
+    width: 100px;
+    height: 100px;
+    margin-left: 65px; 
+    background-color: #728CA8 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+/* #88A4C3 */
+h1 {
+    margin-bottom: 15px;
+}
+
+form{
+    margin-top: 110px;
+    margin-left: 435px;
+     /* align-items: center; 
+     justify-content: center; */
+    width:450px;
+    display: flex;
+}
+
+input{
+    flex: 1;
+    padding: 10px;
+    background-color: black;
+    border: 3px solid black;
+    margin-left: 50px;    
+    border-radius: 10px;
+    outline: none;
+    color: white;
+}
+button{
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    gap: 15px;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+}
