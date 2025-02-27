@@ -12,7 +12,7 @@ const random_image_point = "https://dog.ceo/api/breeds/image/random";
 // }
 
 function shuffleArray(array) {      
-    const n = array.length;            // rechecked
+    const n = array.length;            // rechecked  
     for (let i= 0 ; i<n ;i++){                  
         const j = Math.floor(Math.random() * (i+1));   
     // Swap the elements at indices i and j

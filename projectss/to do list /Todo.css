@@ -81,7 +81,7 @@ input{
     margin-left: 50px;    
     border-radius: 10px;
     outline: none;
-    color: white;
+    color: rgb(143, 18, 18);
 }
 button{
     padding: 10px;
