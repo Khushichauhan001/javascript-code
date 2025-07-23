@@ -14,7 +14,7 @@
   // reference (non primitive )
   // [arrays , functions , and object ]
 
-   const heros = ["mummy " , "papa" , "bhai"] // array 
+   const heros = ["mummy " , "papa" , "bhai"] // array  
    // example of function 
     const myFunction = function(){
         console.log("khushi");
@@ -56,3 +56,7 @@
 
       console.log(userOne.email)
       console.log(userTwo.email)
+
+
+      // heapm sare objects and functions jate h and hmesa reference hi dete h ... agr reference m change kia toh original m bhi change ho jata h 
+      // qki dono ek hi function ko access kr rhe hote h heap m islie unlike stack ..... see last 4 ..5  lines for example 
