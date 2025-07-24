@@ -109,3 +109,34 @@ fetch('https://api.github.com/users/Khushichauhan001')
     
 })
 .catch((error) => console.log('error'))
+
+
+
+
+//harikirat
+function myOwnPromisifiedTimeout(){
+    return new Promise(function(resolve,reject){
+        reject();  // onError();  fn itself which pass as argument 
+    })
+}
+const p = myOwnPromisifiedTimeout();
+p.then(function(){     // if proomise resolve toh return jo bhi ho isme aajyga 
+
+}).catch(function(){ // otherwise , if reject th return hokr isme aajyga 
+
+})
+
+
+
+//concept of .then
+
+setTimeout(function(){
+    console.log("hi there");
+    
+}, 1000)   
+
+// whatever upper fun do , my this function also do the same 
+setTimeout(1000).then(function(){
+    console.log("hi there ");
+    
+})     // when promise got resolved after 1 sec , then function run 
